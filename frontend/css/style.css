@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(230, 230, 230);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+iconify-icon{
+    cursor: pointer;
+    color: #ba8720;
+}
+
+iconify-icon:hover{
+    color: #7b00ff;
+}
+
+input[type="text"]{
+    width: 80%;
+    border-radius: 1em;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.hook-container {
+    padding: 0.5em;
+    overflow: hidden;
+    position: relative;
+    background-color: #7b00ff;
+    color: white;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: 1000;
+}
+.hook {
+display: inline-block;
+white-space: nowrap;
+animation: slideIn 1s ease-in-out forwards;
+}
+
+.hook.hide {
+animation: slideOut 1s ease-in-out forwards;
+}
+
+.shake{
+    animation: pulse 1s infinite alternate;
+}
+
+.navbar div{
+    width: 20em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+@keyframes slideIn {
+0% {
+    transform: translateX(-200%);
+}
+100% {
+    transform: translateX(0%);
+}
+}
+
+@keyframes slideOut {
+0% {
+    transform: translateX(0%);
+}
+100% {
+    transform: translateX(200%);
+}
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+}
